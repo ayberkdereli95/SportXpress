@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> SportXpress - Spor Haberleri ve Magazini </title>
+<link rel="stylesheet" href="main_style.css">
+<script src="main_script.js" defer></script> 
+<script>
+    function anasayfa(){ window.location.href = 'index.html'; }
+    function haberler(){ window.location.href = 'haberler.html'; }
+    function oyuncular(){ window.location.href = 'oyuncular.html'; }
+    function galeri(){ window.location.href = 'gallery.html'; }
+</script>
+</head>
+<body>
+<header>
+	<h1 class="sporxpress_header"> ⚽ SportXpress </h1>
+</header>
+<nav>
+	<button class="button active" onclick="anasayfa()"> Anasayfa </button>
+	<button class="button" onclick="haberler()"> Haberler </button>
+	<button class="button" onclick="oyuncular()"> Oyuncular </button>
+	<button class="button"onclick="galeri()"> Galeri </button>
+</nav>
+
+<main class="main_content"> 
+    
+    <section class="slideshow-section" style="margin-bottom: 40px;">
+        <div class="slideshow-container">
+
+           <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              
+              <a href="sergenyalcin.html"> 
+                  <img src="image_2.png" style="width:100%" alt="Sergen Yalçın"> 
+              </a>
+              <div class="text">Sergen Yalçın Etiler'de Görüntülendi</div>
+            </div>
+          
+           <div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  
+  <a href="yedekarda.html">
+      <img src="image_3.png" style="width:100%" alt="Arda Güler">
+  </a>
+  
+  <div class="text">Arda Güler Athletic Bilbao Maçında Yedek Başladı</div>
+</div>
+          
+                      <div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  
+  <a href="derbi.html">
+      <img src="image_1.png" style="width:100%" alt="Süper Lig">
+  </a>
+  
+  <div class="text">Süper Lig'de Heyecan Dorukta!</div>
+</div>
+          
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+          
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </section>
+
+    <article class="main_article"> 
+        <div class="container_1">
+			<div class="div_left_1">
+				<h1 class="text_style_1"> Süper Lig'de Zirve Yarışı Kızıştı: Herkes Şampiyon Olabilir! </h1>
+				
+				<div class="info_bar"> <p class="p_date"> 🗓️ 01 Aralık 2025 </p>
+					<p class="p_source"> Kaynak: **SportX Muhabir** </p>
+				</div>
+				
+				<div class="div_left_4">
+					<p> Süper Ligde 1 Aralık 2025 tarihinde oynanan Fenerbahçe - Galatasaray dev derbisinin 1-1 bitmesinden sonra Süper lig Puan Tablosunda Galatasaray zirvedeki yerini korudu </p>
+					<p> İlk 3 arasında sadece 1er puan fark varken 4.lük yarışı veren Samsunspor Göztepe ve Beşiktaş arasında da 1er puan Fark bulunmakta </p>
+				</div>
+			</div>
+			
+			<div class="div_right"> 
+                <img src="image_1.png" alt="Futbol Maçından Bir Kare" class="article_image">
+			</div>
+		</div>
+    </article>
+    
+    <br>
+
+    <div align="center">
+        <iframe 
+        src= "https://www.sporx.com/_iframe/puandurumu.php"
+        width="100%"
+        height="600"
+        style="border:0;overflow:hidden"
+        loading="lazy"
+        ></iframe>
+    </div>
+
+</main>
+
+<footer>	
+	<p>&copy; 2025 SportXpress. Tüm Hakları Saklıdır.</p>
+</footer>
+</body>
+</html>

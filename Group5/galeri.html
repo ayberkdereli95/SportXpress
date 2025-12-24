@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Galeri </title>
+<link rel="stylesheet" href="galeri_style.css">
+<script src="main_script.js" defer></script> 
+<script>
+function anasayfa(){
+window.location.href = 'index.html';
+}function haberler(){
+window.location.href = 'haberler.html';
+}function oyuncular(){
+window.location.href = 'oyuncular.html';
+}function galeri(){
+window.location.href = 'galeri.html';
+}
+</script>
+</head>
+<body>
+<header>
+	<h1 class="sporxpress_header"> ⚽ SportXpress </h1>
+</header>
+<nav>
+	<button class="button" onclick="anasayfa()"> Anasayfa </button>
+	<button class="button" onclick="haberler()"> Haberler </button>
+	<button class="button" onclick="oyuncular()"> Oyuncular </button>
+	<button class="button"onclick="galeri()"> Galeri </button>
+</nav>
+
+<main class="main_content"> <article class="main_article">
+<div class="galeri">
+
+<div class="galeri-item">
+  <a target="_blank" href="allianz_arena.png">
+    <img src="allianz_arena.png" alt="Allianz Arena" width="600" height="400">
+  </a>
+  <div class="desc">Allianz Arena</div>
+</div>
+
+<div class="galeri-item">
+  <a target="_blank" href="nou_camp.png">
+    <img src="nou_camp.png" alt="Nou Camp" width="600" height="400">
+  </a>
+  <div class="desc">Nou Camp</div>
+</div>
+
+<div class="galeri-item">
+  <a target="_blank" href="anfield.png">
+    <img src="anfield.png" alt="Anfield" width="600" height="400">
+  </a>
+  <div class="desc">Anfield</div>
+</div>
+
+<div class="galeri-item">
+  <a target="_blank" href="gs.png">
+    <img src="gs.png" alt="Galatasaray" width="600" height="400">
+  </a>
+  <div class="desc">Rams Park</div>
+</div>
+<div class="galeri-item">
+  <a target="_blank" href="fb.png">
+    <img src="fb.png" alt="Fenerbahçe" width="600" height="400">
+  </a>
+  <div class="desc">Fenerbahçe Stadyumu</div>
+</div>
+<div class="galeri-item">
+  <a target="_blank" href="bjk.png">
+    <img src="bjk.png" alt="Beşiktaş" width="600" height="400">
+  </a>
+  <div class="desc">Tüpraş Stadyumu</div>
+</div>
+
+</div>
+</main>
+
+<footer>	
+	<p>&copy; 2025 SportXpress. Tüm Hakları Saklıdır.</p>
+</footer>
+</body>
+</html>
